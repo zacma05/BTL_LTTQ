@@ -41,19 +41,8 @@ namespace BTL_LTTQ.Common
 
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btLogin_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbBookIcon_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click_1(object sender, EventArgs e)

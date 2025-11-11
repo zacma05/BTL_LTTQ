@@ -48,7 +48,8 @@
             // 
             this.lbLogin.AutoSize = true;
             this.lbLogin.Font = new System.Drawing.Font("Segoe UI", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLogin.Location = new System.Drawing.Point(6, 18);
+            this.lbLogin.Location = new System.Drawing.Point(4, 15);
+            this.lbLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLogin.Name = "lbLogin";
             this.lbLogin.Size = new System.Drawing.Size(161, 38);
             this.lbLogin.TabIndex = 0;
@@ -59,9 +60,10 @@
             // 
             this.lbTenTaiKhoan.AutoSize = true;
             this.lbTenTaiKhoan.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenTaiKhoan.Location = new System.Drawing.Point(10, 65);
+            this.lbTenTaiKhoan.Location = new System.Drawing.Point(8, 53);
+            this.lbTenTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTenTaiKhoan.Name = "lbTenTaiKhoan";
-            this.lbTenTaiKhoan.Size = new System.Drawing.Size(90, 17);
+            this.lbTenTaiKhoan.Size = new System.Drawing.Size(74, 13);
             this.lbTenTaiKhoan.TabIndex = 1;
             this.lbTenTaiKhoan.Text = "Tên tài khoản";
             this.lbTenTaiKhoan.Click += new System.EventHandler(this.lbTenTaiKhoan_Click);
@@ -70,9 +72,10 @@
             // 
             this.lbMatKhau.AutoSize = true;
             this.lbMatKhau.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMatKhau.Location = new System.Drawing.Point(10, 136);
+            this.lbMatKhau.Location = new System.Drawing.Point(8, 110);
+            this.lbMatKhau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMatKhau.Name = "lbMatKhau";
-            this.lbMatKhau.Size = new System.Drawing.Size(66, 17);
+            this.lbMatKhau.Size = new System.Drawing.Size(54, 13);
             this.lbMatKhau.TabIndex = 2;
             this.lbMatKhau.Text = "Mật khẩu";
             this.lbMatKhau.Click += new System.EventHandler(this.lbMatKhau_Click);
@@ -96,7 +99,7 @@
             // 
             // gBDangNhap
             // 
-            this.gBDangNhap.Controls.Add(this.lBQuenMatKhau);
+            this.gBDangNhap.Controls.Add(this.btnQuenMK);
             this.gBDangNhap.Controls.Add(this.lbLogin);
             this.gBDangNhap.Controls.Add(this.btLogin);
             this.gBDangNhap.Controls.Add(this.tBMatKhau);
@@ -125,11 +128,15 @@
             // btLogin
             // 
             this.btLogin.BackColor = System.Drawing.Color.SteelBlue;
+            this.btLogin.FlatAppearance.BorderSize = 0;
+            this.btLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btLogin.Location = new System.Drawing.Point(54, 236);
+            this.btLogin.Location = new System.Drawing.Point(40, 192);
+            this.btLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(146, 31);
+            this.btLogin.Size = new System.Drawing.Size(110, 25);
             this.btLogin.TabIndex = 7;
             this.btLogin.Text = "Đăng nhập";
             this.btLogin.UseVisualStyleBackColor = false;
@@ -166,9 +173,21 @@
             this.pBGraduate.TabIndex = 0;
             this.pBGraduate.TabStop = false;
             // 
+            // btnQuenMK
+            // 
+            this.btnQuenMK.FlatAppearance.BorderSize = 0;
+            this.btnQuenMK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnQuenMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuenMK.Location = new System.Drawing.Point(50, 164);
+            this.btnQuenMK.Name = "btnQuenMK";
+            this.btnQuenMK.Size = new System.Drawing.Size(90, 23);
+            this.btnQuenMK.TabIndex = 9;
+            this.btnQuenMK.Text = "Quên mật khẩu";
+            this.btnQuenMK.UseVisualStyleBackColor = true;
+            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 502);
             this.Controls.Add(this.pnLayout);
