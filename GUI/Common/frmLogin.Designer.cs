@@ -99,7 +99,7 @@
             // 
             // gBDangNhap
             // 
-            this.gBDangNhap.Controls.Add(this.btnQuenMK);
+            //this.gBDangNhap.Controls.Add(this.btnQuenMK);
             this.gBDangNhap.Controls.Add(this.lbLogin);
             this.gBDangNhap.Controls.Add(this.btLogin);
             this.gBDangNhap.Controls.Add(this.tBMatKhau);
@@ -123,7 +123,7 @@
             this.lBQuenMatKhau.TabIndex = 8;
             this.lBQuenMatKhau.TabStop = true;
             this.lBQuenMatKhau.Text = "Quên mật khẩu";
-            this.lBQuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            //this.lBQuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btLogin
             // 
@@ -175,15 +175,15 @@
             // 
             // btnQuenMK
             // 
-            this.btnQuenMK.FlatAppearance.BorderSize = 0;
-            this.btnQuenMK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnQuenMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuenMK.Location = new System.Drawing.Point(50, 164);
-            this.btnQuenMK.Name = "btnQuenMK";
-            this.btnQuenMK.Size = new System.Drawing.Size(90, 23);
-            this.btnQuenMK.TabIndex = 9;
-            this.btnQuenMK.Text = "Quên mật khẩu";
-            this.btnQuenMK.UseVisualStyleBackColor = true;
+            //this.btnQuenMK.FlatAppearance.BorderSize = 0;
+            //this.btnQuenMK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            //this.btnQuenMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.btnQuenMK.Location = new System.Drawing.Point(50, 164);
+            //this.btnQuenMK.Name = "btnQuenMK";
+            //this.btnQuenMK.Size = new System.Drawing.Size(90, 23);
+            //this.btnQuenMK.TabIndex = 9;
+            //this.btnQuenMK.Text = "Quên mật khẩu";
+            //this.btnQuenMK.UseVisualStyleBackColor = true;
             // 
             // frmLogin
             // 
