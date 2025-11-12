@@ -18,7 +18,7 @@ namespace BTL_LTTQ.GUI.Common
         public UC_Template()
         {
             InitializeComponent();
-            CollaspeMenu(true);
+            CollaspeMenu(false);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -35,6 +35,7 @@ namespace BTL_LTTQ.GUI.Common
         {
             if (collapse) // Thu gọn menu
             {
+                this.Width = 100;
                 panelMenu.Width = 100;
                 pictureBox1.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
@@ -51,6 +52,7 @@ namespace BTL_LTTQ.GUI.Common
             }
             else // Mở rộng menu
             {
+                this.Width = 230;
                 panelMenu.Width = 230;
                 pictureBox1.Visible = true;
                 btnMenu.Dock = DockStyle.None;

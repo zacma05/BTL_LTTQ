@@ -23,7 +23,7 @@ namespace BTL_LTTQ
 
             DatabaseConnection.InitializeDatabase();
 
-            Application.Run(new frmLogin());
+            Application.Run(new frmMain());
         }
     }
 }

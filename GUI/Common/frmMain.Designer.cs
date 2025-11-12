@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.sidebar = new BTL_LTTQ.GUI.Common.UC_Template();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.sidebar = new BTL_LTTQ.GUI.Common.UC_Template();
             this.SuspendLayout();
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(230, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(470, 520);
+            this.panelContainer.TabIndex = 3;
             // 
             // sidebar
             // 
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(250, 520);
+            this.sidebar.Size = new System.Drawing.Size(230, 520);
             this.sidebar.TabIndex = 2;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(250, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(450, 520);
-            this.panelContainer.TabIndex = 3;
             // 
             // frmMain
             // 

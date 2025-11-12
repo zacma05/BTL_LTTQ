@@ -63,7 +63,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 551);
+            this.panelMenu.Size = new System.Drawing.Size(230, 551);
             this.panelMenu.TabIndex = 3;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -83,7 +83,7 @@
             this.btnThongTin.Location = new System.Drawing.Point(0, 460);
             this.btnThongTin.Name = "btnThongTin";
             this.btnThongTin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnThongTin.Size = new System.Drawing.Size(250, 45);
+            this.btnThongTin.Size = new System.Drawing.Size(230, 45);
             this.btnThongTin.TabIndex = 8;
             this.btnThongTin.Tag = "Thông Tin Cá Nhân";
             this.btnThongTin.Text = "  Thông Tin Cá Nhân";
@@ -107,7 +107,7 @@
             this.btnKhoa.Location = new System.Drawing.Point(0, 415);
             this.btnKhoa.Name = "btnKhoa";
             this.btnKhoa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnKhoa.Size = new System.Drawing.Size(250, 45);
+            this.btnKhoa.Size = new System.Drawing.Size(230, 45);
             this.btnKhoa.TabIndex = 16;
             this.btnKhoa.Tag = "Khoa";
             this.btnKhoa.Text = "  Khoa";
@@ -132,7 +132,7 @@
             this.btnXemDiem.Location = new System.Drawing.Point(0, 370);
             this.btnXemDiem.Name = "btnXemDiem";
             this.btnXemDiem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnXemDiem.Size = new System.Drawing.Size(250, 45);
+            this.btnXemDiem.Size = new System.Drawing.Size(230, 45);
             this.btnXemDiem.TabIndex = 15;
             this.btnXemDiem.Tag = "Xem Điểm";
             this.btnXemDiem.Text = "  Xem Điểm";
@@ -156,7 +156,7 @@
             this.btnTaiKhoan.Location = new System.Drawing.Point(0, 325);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTaiKhoan.Size = new System.Drawing.Size(250, 45);
+            this.btnTaiKhoan.Size = new System.Drawing.Size(230, 45);
             this.btnTaiKhoan.TabIndex = 14;
             this.btnTaiKhoan.Tag = "Tài Khoản";
             this.btnTaiKhoan.Text = "  Tài Khoản";
@@ -180,7 +180,7 @@
             this.btnTKBC.Location = new System.Drawing.Point(0, 280);
             this.btnTKBC.Name = "btnTKBC";
             this.btnTKBC.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTKBC.Size = new System.Drawing.Size(250, 45);
+            this.btnTKBC.Size = new System.Drawing.Size(230, 45);
             this.btnTKBC.TabIndex = 13;
             this.btnTKBC.Tag = "Thống Kê Báo Cáo";
             this.btnTKBC.Text = "  Thống Kê Báo Cáo";
@@ -204,7 +204,7 @@
             this.btnNhapDiem.Location = new System.Drawing.Point(0, 235);
             this.btnNhapDiem.Name = "btnNhapDiem";
             this.btnNhapDiem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnNhapDiem.Size = new System.Drawing.Size(250, 45);
+            this.btnNhapDiem.Size = new System.Drawing.Size(230, 45);
             this.btnNhapDiem.TabIndex = 12;
             this.btnNhapDiem.Tag = "Nhập Điểm";
             this.btnNhapDiem.Text = "  Nhập Điểm";
@@ -228,7 +228,7 @@
             this.btnHocPhan.Location = new System.Drawing.Point(0, 190);
             this.btnHocPhan.Name = "btnHocPhan";
             this.btnHocPhan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHocPhan.Size = new System.Drawing.Size(250, 45);
+            this.btnHocPhan.Size = new System.Drawing.Size(230, 45);
             this.btnHocPhan.TabIndex = 11;
             this.btnHocPhan.Tag = "Học Phần";
             this.btnHocPhan.Text = "  Học Phần";
@@ -252,7 +252,7 @@
             this.btnSinhVien.Location = new System.Drawing.Point(0, 145);
             this.btnSinhVien.Name = "btnSinhVien";
             this.btnSinhVien.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSinhVien.Size = new System.Drawing.Size(250, 45);
+            this.btnSinhVien.Size = new System.Drawing.Size(230, 45);
             this.btnSinhVien.TabIndex = 10;
             this.btnSinhVien.Tag = "Sinh Viên";
             this.btnSinhVien.Text = "  Sinh Viên";
@@ -276,7 +276,7 @@
             this.btnTrangChu.Location = new System.Drawing.Point(0, 100);
             this.btnTrangChu.Name = "btnTrangChu";
             this.btnTrangChu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTrangChu.Size = new System.Drawing.Size(250, 45);
+            this.btnTrangChu.Size = new System.Drawing.Size(230, 45);
             this.btnTrangChu.TabIndex = 9;
             this.btnTrangChu.Tag = "Trang Chủ";
             this.btnTrangChu.Text = "  Trang Chủ";
@@ -291,7 +291,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.Size = new System.Drawing.Size(230, 100);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -326,7 +326,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMenu);
             this.Name = "UC_Template";
-            this.Size = new System.Drawing.Size(250, 551);
+            this.Size = new System.Drawing.Size(230, 551);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
