@@ -12,7 +12,6 @@ namespace BTL_LTTQ.GUI.Common
             InitializeComponent();
             sidebar.Dock = DockStyle.Left;
             sidebar.MenuClicked += Sidebar_MenuClicked;
-            this.Controls.Add(sidebar);
 
             this.Resize += FrmMain_Resize; // Gắn sự kiện resize
         }
