@@ -6,71 +6,96 @@ namespace WinFormsApp.Helpers
     {
         public static void InsertSampleData()
         {
-            using (SqlConnection conn = DatabaseConnection.GetDbConnection())
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
 
-                string query = @"
-                -- Thêm KHOA (5 khoa)
-                IF NOT EXISTS(SELECT 1 FROM KHOA WHERE MaKhoa='CNTT')
-                    INSERT INTO KHOA(MaKhoa, TenKhoa) VALUES
-                    ('CNTT','Công nghệ thông tin'),
-                    ('QTKD','Quản trị kinh doanh'),
-                    ('KT','Kế toán'),
-                    ('VT','Vật lý kỹ thuật'),
-                    ('NN','Ngoại ngữ');
+                // 5 tài khoản (1 admin, 4 sinh viên)
+                string sql = @"
+                    INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
+                    ('CNTT', N'Công nghệ thông tin'),
+                    ('KHMT', N'Khoa học máy tính'),
+                    ('CK', N'Cơ khí');
 
-                -- Thêm TTTAIKHOAN (1 admin, 4 sinh viên)
-                IF NOT EXISTS(SELECT 1 FROM TTTAIKHOAN WHERE MaTK='TK000')
-                    INSERT INTO TTTAIKHOAN(MaTK, TaiKhoan, MatKhau, Loai) VALUES
-                    ('TK000','admin','123',0),
-                    ('TK001','sv1','123',1),
-                    ('TK002','sv2','123',1),
-                    ('TK003','sv3','123',1),
-                    ('TK004','sv4','123',1);
 
-                -- Thêm HOCPHAN (5 học phần)
-                IF NOT EXISTS(SELECT 1 FROM HOCPHAN WHERE MaHP='HP001')
-                    INSERT INTO HOCPHAN(MaHP, TenHP, SoTin, TrongSoQT, TrongSoKTHP) VALUES
-                    ('HP001','Toán cao cấp',3,0.3,0.7),
-                    ('HP002','Lập trình C#',4,0.4,0.6),
-                    ('HP003','Cấu trúc dữ liệu',3,0.35,0.65),
-                    ('HP004','Cơ sở dữ liệu',3,0.3,0.7),
-                    ('HP005','Mạng máy tính',2,0.4,0.6);
 
-                -- Thêm SINHVIEN (10 sinh viên)
-                IF NOT EXISTS(SELECT 1 FROM SINHVIEN WHERE MaSV='SV001')
-                    INSERT INTO SINHVIEN(MaSV, HoTen, NgaySinh, NoiSinh, GioiTinh, Lop, MaKhoa, MaTK) VALUES
-                    ('SV001','Nguyen Van A','2000-01-01','HN','Nam','CNTT1','CNTT','TK001'),
-                    ('SV002','Tran Thi B','2000-02-02','HN','Nu','CNTT2','CNTT','TK002'),
-                    ('SV003','Le Van C','2000-03-03','HN','Nam','QTKD1','QTKD','TK003'),
-                    ('SV004','Pham Thi D','2000-04-04','HN','Nu','KT1','KT','TK004'),
-                    ('SV005','Hoang Van E','2000-05-05','HN','Nam','VT1','VT',NULL),
-                    ('SV006','Nguyen Thi F','2000-06-06','HN','Nu','NN1','NN',NULL),
-                    ('SV007','Tran Van G','2000-07-07','HN','Nam','CNTT3','CNTT',NULL),
-                    ('SV008','Le Thi H','2000-08-08','HN','Nu','QTKD2','QTKD',NULL),
-                    ('SV009','Pham Van I','2000-09-09','HN','Nam','KT2','KT',NULL),
-                    ('SV010','Hoang Thi J','2000-10-10','HN','Nu','VT2','VT',NULL);
+                    INSERT INTO TTTAIKHOAN (MaTK, TaiKhoan, MatKhau, Loai)
+                    VALUES
+                    ('2312001', NULL, NULL, 1),
+                    ('2312002', NULL, NULL, 1),
+                    ('2312003', NULL, NULL, 1),
+                    ('2312004', NULL, NULL, 1),
+                    ('2312005', NULL, NULL, 1),
+                    ('2312006', NULL, NULL, 1),
+                    ('2312007', NULL, NULL, 1),
+                    ('2312008', NULL, NULL, 1),
+                    ('2312009', NULL, NULL, 1),
+                    ('2312010', NULL, NULL, 1),
+                    ('2313001', NULL, NULL, 1),
+                    ('2313002', NULL, NULL, 1),
+                    ('2313003', NULL, NULL, 1),
+                    ('2313004', NULL, NULL, 1),
+                    ('2313005', NULL, NULL, 1),
+                    ('2313006', NULL, NULL, 1),
+                    ('2313007', NULL, NULL, 1),
+                    ('2313008', NULL, NULL, 1),
+                    ('2313009', NULL, NULL, 1),
+                    ('2313010', NULL, NULL, 1),
+                    ('2314001', NULL, NULL, 1),
+                    ('2314002', NULL, NULL, 1),
+                    ('2314003', NULL, NULL, 1),
+                    ('2314004', NULL, NULL, 1),
+                    ('2314005', NULL, NULL, 1),
+                    ('2314006', NULL, NULL, 1),
+                    ('2314007', NULL, NULL, 1),
+                    ('2314008', NULL, NULL, 1),
+                    ('2314009', NULL, NULL, 1),
+                    ('2314010', NULL, NULL, 1);
 
-                -- Thêm BANGDIEM (một số điểm mẫu)
-                IF NOT EXISTS(SELECT 1 FROM BANGDIEM WHERE MaSV='SV001')
-                    INSERT INTO BANGDIEM(MaSV, MaHP, DiemQT, DiemKTHP) VALUES
-                    ('SV001','HP001',8.5,7.0),
-                    ('SV001','HP002',9.0,8.0),
-                    ('SV002','HP001',7.5,6.0),
-                    ('SV002','HP003',8.0,7.5),
-                    ('SV003','HP002',8.0,8.0),
-                    ('SV003','HP004',9.0,8.5),
-                    ('SV004','HP001',7.0,6.5),
-                    ('SV004','HP005',8.0,7.0),
-                    ('SV005','HP003',6.5,6.0),
-                    ('SV005','HP004',7.5,7.0);
-                ";
+                    INSERT INTO SINHVIEN (MaSV, HoTen, NgaySinh, NoiSinh, GioiTinh, Lop, MaKhoa, MaTK)
+                    VALUES
+                    ('2312001', N'Nguyễn Văn An', '2003-04-12', N'Hà Nội', N'Nam', N'CNTT1', 'CNTT', '2312001'),
+                    ('2312002', N'Lê Thị Bình', '2003-07-20', N'Hải Phòng', N'Nữ', N'CNTT1', 'CNTT', '2312002'),
+                    ('2312003', N'Trần Minh Cường', '2003-11-02', N'Bắc Ninh', N'Nam', N'CNTT3', 'CNTT', '2312003'),
+                    ('2312004', N'Phạm Quỳnh Nga', '2003-03-18', N'Hà Nam', N'Nữ', N'CNTT3', 'CNTT', '2312004'),
+                    ('2312005', N'Đỗ Hoàng Việt', '2003-10-25', N'Hưng Yên', N'Nam', N'CNTT1', 'CNTT', '2312005'),
+                    ('2312006', N'Nguyễn Thanh Tú', '2003-09-12', N'Hà Nội', N'Nữ', N'CNTT3', 'CNTT', '2312006'),
+                    ('2312007', N'Phan Thị Hạnh', '2003-06-04', N'Nghệ An', N'Nữ', N'CNTT1', 'CNTT', '2312007'),
+                    ('2312008', N'Hoàng Văn Huy', '2003-12-21', N'Bắc Giang', N'Nam', N'CNTT3', 'CNTT', '2312008'),
+                    ('2312009', N'Nguyễn Đình Long', '2003-01-17', N'Thái Bình', N'Nam', N'CNTT1', 'CNTT', '2312009'),
+                    ('2312010', N'Trần Thu Trang', '2003-08-10', N'Hà Nội', N'Nữ', N'CNTT3', 'CNTT', '2312010');
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.ExecuteNonQuery();
-                }
+                    
+                    INSERT INTO SINHVIEN (MaSV, HoTen, NgaySinh, NoiSinh, GioiTinh, Lop, MaKhoa, MaTK)
+                    VALUES
+                    ('2313001', N'Lê Anh Tuấn', '2003-02-05', N'Hà Nội', N'Nam', N'KHMT1', 'KHMT', '2313001'),
+                    ('2313002', N'Phạm Hồng Nhung', '2003-03-15', N'Hải Dương', N'Nữ', N'KHMT2', 'KHMT', '2313002'),
+                    ('2313003', N'Trần Quốc Việt', '2003-07-22', N'Nam Định', N'Nam', N'KHMT1', 'KHMT', '2313003'),
+                    ('2313004', N'Ngô Thanh Huyền', '2003-09-11', N'Ninh Bình', N'Nữ', N'KHMT2', 'KHMT', '2313004'),
+                    ('2313005', N'Đinh Văn Hoàng', '2003-10-01', N'Thanh Hóa', N'Nam', N'KHMT1', 'KHMT', '2313005'),
+                    ('2313006', N'Nguyễn Hoài Nam', '2003-12-20', N'Hà Nội', N'Nam', N'KHMT2', 'KHMT', '2313006'),
+                    ('2313007', N'Lương Mai Lan', '2003-04-30', N'Hà Nam', N'Nữ', N'KHMT1', 'KHMT', '2313007'),
+                    ('2313008', N'Hoàng Đức Duy', '2003-08-09', N'Hà Giang', N'Nam', N'KHMT2', 'KHMT', '2313008'),
+                    ('2313009', N'Phạm Anh Dũng', '2003-06-16', N'Hải Phòng', N'Nam', N'KHMT1', 'KHMT', '2313009'),
+                    ('2313010', N'Nguyễn Minh Hằng', '2003-05-08', N'Hà Nội', N'Nữ', N'KHMT2', 'KHMT', '2313010');
+
+                    
+                    INSERT INTO SINHVIEN (MaSV, HoTen, NgaySinh, NoiSinh, GioiTinh, Lop, MaKhoa, MaTK)
+                    VALUES
+                    ('2314001', N'Trần Hữu Quang', '2003-04-01', N'Hà Nội', N'Nam', N'CK1', 'CK', '2314001'),
+                    ('2314002', N'Lê Quang Huy', '2003-09-10', N'Hải Dương', N'Nam', N'CK1', 'CK', '2314002'),
+                    ('2314003', N'Phạm Hoàng Long', '2003-11-03', N'Hà Nam', N'Nam', N'CK2', 'CK', '2314003'),
+                    ('2314004', N'Nguyễn Thị Hòa', '2003-02-26', N'Hà Nội', N'Nữ', N'CK2', 'CK', '2314004'),
+                    ('2314005', N'Hoàng Văn Tùng', '2003-06-20', N'Ninh Bình', N'Nam', N'CK1', 'CK', '2314005'),
+                    ('2314006', N'Đặng Thu Thảo', '2003-08-13', N'Hà Nội', N'Nữ', N'CK2', 'CK', '2314006'),
+                    ('2314007', N'Phan Văn Đức', '2003-12-01', N'Thanh Hóa', N'Nam', N'CK1', 'CK', '2314007'),
+                    ('2314008', N'Lý Thị Hoa', '2003-05-25', N'Hà Giang', N'Nữ', N'CK2', 'CK', '2314008'),
+                    ('2314009', N'Vũ Đức Toàn', '2003-07-15', N'Hà Nội', N'Nam', N'CK1', 'CK', '2314009'),
+                    ('2314010', N'Trịnh Văn Nam', '2003-03-19', N'Hải Phòng', N'Nam', N'CK2', 'CK', '2314010');
+                    ";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
             }
         }
     }

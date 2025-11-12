@@ -56,6 +56,7 @@
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -72,6 +73,7 @@
   <ItemGroup>
     <Compile Include="BUS\LopHocBUS.cs" />
     <Compile Include="DAL\LopHocDAL.cs" />
+    <Compile Include="Database\AppSetting.cs" />
     <Compile Include="GUI\Admin\frmQuanLySinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,15 +164,7 @@
   <ItemGroup>
     <None Include="Utils\Images\bookicon.png" />
     <None Include="Utils\Images\pngwing.com.png" />
-    <Content Include="Database\LTTQ_QLSV_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>LTTQ_QLSV.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS\" />
-    <Folder Include="DAL\" />
-    <Folder Include="GUI\Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

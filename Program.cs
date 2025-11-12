@@ -21,12 +21,7 @@ namespace BTL_LTTQ
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Tạo database và bảng
-            DbInit.CreateDatabaseIfNotExists();
-            DbInit.CreateTablesIfNotExists();
-
-            // Chèn dữ liệu mẫu
-            DbDataGen.InsertSampleData();
+            DatabaseConnection.InitializeDatabase();
 
             Application.Run(new frmLogin());
         }

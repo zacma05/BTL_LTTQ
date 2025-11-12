@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_LTTQ.GUI.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,48 @@ namespace BTL_LTTQ.GUI.Admin
 {
     public partial class frmQuanLySinhVien : Form
     {
+        UC_Template sidebar;
+
         public frmQuanLySinhVien()
         {
             InitializeComponent();
+            sidebar = new UC_Template();
+            sidebar.Dock = DockStyle.Left;
+            sidebar.MenuClicked += Sidebar_MenuClicked;
+            this.Controls.Add(sidebar);
+
+            this.Resize += FrmQuanLySinhVien_Resize; // Gắn sự kiện resize
+        }
+
+        private void FrmQuanLySinhVien_Resize(object sender, EventArgs e)
+        {
+            sidebar.AutoAdjustByWindowSize(this.Width);
+        }
+
+        private void Sidebar_MenuClicked(object sender, string buttonName)
+        {
+            //switch (buttonName)
+            //{
+            //    case "btnTrangChu":
+            //        LoadContent(new UC_TrangChu());
+            //        break;
+            //    case "btnSinhVien":
+            //        LoadContent(new UC_QuanLySinhVien());
+            //        break;
+            //    case "btnMonHoc":
+            //        LoadContent(new UC_QuanLyMonHoc());
+            //        break;
+            //    case "btnThongKe":
+            //        LoadContent(new UC_ThongKe());
+            //        break;
+            //}
+        }
+
+        private void LoadContent(UserControl uc)
+        {
+            panelContainer.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(uc);
         }
 
         private void label5_Click(object sender, EventArgs e)

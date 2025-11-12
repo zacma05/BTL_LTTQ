@@ -6,12 +6,10 @@ namespace BTL_LTTQ.GUI.Common
 {
     public partial class frmMain : Form
     {
-        UC_Template sidebar;
 
         public frmMain()
         {
             InitializeComponent();
-            sidebar = new UC_Template();
             sidebar.Dock = DockStyle.Left;
             sidebar.MenuClicked += Sidebar_MenuClicked;
             this.Controls.Add(sidebar);
