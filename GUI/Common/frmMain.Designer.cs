@@ -36,9 +36,9 @@
             // 
             this.panelContainer.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(230, 0);
+            this.panelContainer.Location = new System.Drawing.Point(400, 0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(470, 520);
+            this.panelContainer.Size = new System.Drawing.Size(457, 606);
             this.panelContainer.TabIndex = 3;
             // 
             // sidebar
@@ -46,14 +46,14 @@
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(230, 520);
+            this.sidebar.Size = new System.Drawing.Size(400, 606);
             this.sidebar.TabIndex = 2;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 520);
+            this.ClientSize = new System.Drawing.Size(857, 606);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.sidebar);
             this.Margin = new System.Windows.Forms.Padding(2);
