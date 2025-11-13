@@ -35,7 +35,7 @@
             // 
             this.uc_sidebarSinhVien1.Dock = System.Windows.Forms.DockStyle.Left;
             this.uc_sidebarSinhVien1.Location = new System.Drawing.Point(0, 0);
-            this.uc_sidebarSinhVien1.Margin = new System.Windows.Forms.Padding(5);
+            this.uc_sidebarSinhVien1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uc_sidebarSinhVien1.Name = "uc_sidebarSinhVien1";
             this.uc_sidebarSinhVien1.Size = new System.Drawing.Size(133, 807);
             this.uc_sidebarSinhVien1.TabIndex = 0;

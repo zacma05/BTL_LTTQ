@@ -229,11 +229,20 @@
     <EmbeddedResource Include="GUI\SinhVien\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SinhVien\Uc_HocPhanSinhVien.resx">
+      <DependentUpon>Uc_HocPhanSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\SinhVien\Uc_sidebarSinhVien.resx">
       <DependentUpon>Uc_sidebarSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SinhVien\Uc_TrangChuSinhVien.resx">
       <DependentUpon>Uc_TrangChuSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SinhVien\Uc_TTCNSinhVien.resx">
+      <DependentUpon>Uc_TTCNSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SinhVien\Uc_XemDiemSinhVien.resx">
+      <DependentUpon>Uc_XemDiemSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
